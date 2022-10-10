@@ -1,0 +1,76 @@
+﻿@using MVC_apple_store.Helpers
+
+@model IEnumerable<BusinessLogic.DTOs.PhoneDTO>;
+@{
+    string? toastrMsg = TempData[WebConstants.alertMsgKey] as string;
+}
+
+<h1 class="text-center">Phone List</h1>
+
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Image</th>
+            <th scope="col">Model</th>
+            <th scope="col">Color</th>
+            <th scope="col">Memory</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var phone in Model)
+        {
+            <tr>
+                <th class="align-middle" scope="row">@phone.Id</th>
+                <td class="align-middle">
+                    <img src="@phone.ImageUrl" width="50" alt="Product Image" />
+                </td>
+                <td class="align-middle">@phone.Model</td>
+                <td class="align-middle">@phone.ColorName</td>
+                <td class="align-middle">@phone.Memory</td>
+                <td class="align-middle">@phone.Price</td>
+                <td class="align-middle">@phone.Description</td>
+                <td class="align-middle">
+                    <div class="btn-group" role="group">
+                        <a asp-action="Edit" asp-route-id="@phone.Id" class="btn btn-warning">
+                            <i class="bi bi-pencil-fill"></i> Edit
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@phone.Id" class="btn btn-danger">
+                            <i class="bi bi-trash-fill"></i> Delete
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">
+    <i class="bi bi-plus"></i> Create New Phone
+</a>
+
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+    <div id="toastr-block" data-bs-autohide="true" data-bs-animation="true" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                @toastrMsg
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
+@if (toastrMsg != null)
+{
+    @section Scripts
+    {
+    <script>
+        var toastLiveExample = document.getElementById('toastr-block');
+        var toast = new bootstrap.Toast(toastLiveExample);
+        toast.show();
+    </script>
+    }
+}

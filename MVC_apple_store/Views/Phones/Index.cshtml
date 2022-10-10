@@ -1,0 +1,26 @@
+﻿@model IEnumerable<BusinessLogic.DTOs.PhoneDTO>;
+
+<seciton class="text-center">
+    <h2>iPhone 14 Pro</h2>
+    <h1>Pro. Beyond.</h1>
+    <p>From $41.62/mo. for 24 mo. or $999 before trade‑in1</p>
+</seciton>
+<hr />
+<div>
+    <h3 class="text-center my-4">New iPhone Models</h3>
+    <div class="list-group">
+        @foreach (var phone in Model)
+        {
+            <a asp-action="Details" asp-route-id="@phone.Id" class="list-group-item list-group-item-action" aria-current="true">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">@phone.Model</h5>
+                    <small>@phone.Price$</small>
+                </div>
+                <p class="mb-1">@phone.ColorName</p>
+                <small>@phone.Description</small>
+            </a>
+        }
+    </div>
+    <p class="text-center mt-2">Count: @Model.Count()</p>
+</div>
+

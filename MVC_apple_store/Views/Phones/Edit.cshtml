@@ -1,0 +1,71 @@
+﻿@model BusinessLogic.DTOs.PhoneDTO;
+@{
+    const string imagePlaceholderUrl = "https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg";
+}
+
+<h1 class="text-center">Edit Phone Information</h1>
+<hr />
+
+<form asp-action="Edit" method="post" class="row g-3">
+    <div class="col-6">
+        <label asp-for="Model" class="form-label">Model</label>
+        <input asp-for="Model" class="form-control">
+        <span asp-validation-for="Model" class="text-danger"></span>
+    </div>
+    <div class="col-6">
+        <label asp-for="Price" class="form-label">Price</label>
+        <input asp-for="Price" class="form-control">
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="col-6">
+        <label asp-for="ColorId" class="form-label">Color</label>
+        <select asp-for="ColorId" asp-items="@ViewBag.ColorList" class="form-select"></select>
+        <span asp-validation-for="ColorId" class="text-danger"></span>
+    </div>
+    <div class="col-6">
+        <label asp-for="Memory" class="form-label">Memory</label>
+        <input asp-for="Memory" class="form-control">
+        <span asp-validation-for="Memory" class="text-danger"></span>
+    </div>
+    <div class="col-12">
+        <label asp-for="Description" class="form-label">Description</label>
+        <textarea class="form-control" asp-for="Description" rows="5"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="col-12">
+        <div class="text-center my-2">
+            <img src="@imagePlaceholderUrl" alt="Product Image" class="rounded" width="100" id="image" />
+        </div>
+        <label asp-for="ImageUrl" class="form-label">Image URL</label>
+        <input type="url" asp-for="ImageUrl" class="form-control" id="image-path-input">
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    </div>
+    <div class="col-6">
+        <a asp-action="Manage" class="btn btn-secondary w-100">
+            <i class="bi bi-arrow-left"></i> Back
+        </a>
+    </div>
+    <div class="col-6">
+        <button type="submit" class="btn btn-primary w-100">
+            <i class="bi bi-pencil"></i> Edit
+        </button>
+    </div>
+</form>
+
+@section Scripts
+{
+    <script type="text/javascript">
+        $("#image-path-input").change(function () {
+            const value = $(this).val();
+            setImage(value);
+        });
+
+        function setImage(imageUrl) {
+            if (imageUrl == '') {
+                imageUrl = '@imagePlaceholderUrl';
+            }
+            $("#image").attr('src', imageUrl);
+        }
+        setImage('@Model.ImageUrl');
+    </script>
+}

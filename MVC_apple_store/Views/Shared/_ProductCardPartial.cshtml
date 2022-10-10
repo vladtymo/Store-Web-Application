@@ -1,0 +1,17 @@
+﻿@model BusinessLogic.DTOs.PhoneDTO;
+
+<div class="col">
+    <div class="card h-100 text-center">
+        <img src="@Model.ImageUrl" class="card-img-top p-3 prod-card-image" alt="Product Image">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Model</h5>
+            <h6 class="card-text">@Model.ColorName</h6>
+        </div>
+        <div class="card-footer">
+            <p class="card-text">@Model.Price$</p>
+            <a asp-controller="Phones" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-secondary">
+                <i class="bi bi-info-square"></i> Details
+            </a>
+        </div>
+    </div>
+</div>

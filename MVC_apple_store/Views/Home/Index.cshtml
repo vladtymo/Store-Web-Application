@@ -1,0 +1,10 @@
+﻿@model IEnumerable<BusinessLogic.DTOs.PhoneDTO>;
+
+<h1 class="display-4 text-center">Product Catalog</h1>
+
+<div class="row row-cols-2 row-cols-md-4 g-3 mt-2">
+    @foreach (var i in Model)
+    {
+        <partial name="_ProductCardPartial" model="@i" />
+    }
+</div>

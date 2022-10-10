@@ -1,0 +1,51 @@
+﻿@model BusinessLogic.DTOs.PhoneDTO;
+
+<secion class="text-center">
+    <div class="text-center my-2">
+        <img width="300" src="@Model.ImageUrl" class="rounded" alt="iPhone image">
+    </div>
+    <h1>@Model.Model</h1>
+    <h3>@Model.Description</h3>
+    <p>From @Model.Price$ before trade-in*</p>
+    <div>
+        @if (ViewBag.IsInCart)
+        {
+            <a asp-controller="Cart" asp-action="Remove" asp-route-productId="@Model.Id" class="btn btn-secondary my-3">
+                <i class="bi bi-bag-x"></i> Remove from Cart
+            </a>
+        }
+        else
+        {
+            <a asp-controller="Cart" asp-action="Add" asp-route-productId="@Model.Id" class="btn btn-primary my-3">
+                <i class="bi bi-bag-plus"></i> Buy
+            </a>
+        }
+    </div>
+    <div>
+        <a href="#" class="link-secondary">Watch the film</a>
+        <a href="#" class="link-secondary">Watch the event</a>
+    </div>
+</secion>
+
+<div class="mt-3 fs-6">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            * Available to qualified customers and requires 24-month installment loan when you select Citizens One or Apple Card Monthly Installments (ACMI) as payment type at checkout at Apple. iPhone activation required with AT&T, T-Mobile, Sprint, or Verizon for purchases made with ACMI at an Apple Store. Subject to credit approval and credit limit. Taxes and shipping are not included in ACMI and are subject to your card’s variable APR. Additional Apple Card Monthly Installments terms are in the Apple Card Customer Agreement. Additional iPhone Payments terms are here. ACMI is not available for purchases made online at special storefronts. The last month’s payment for each product will be the product’s purchase price, less all other payments at the monthly payment amount.
+        </li>
+        <li class="list-group-item">
+            Some features may not be available for all countries or all areas. View complete list.
+            Live Activities and iCloud Shared Photo Library are coming to iOS 16 in an update later this year.
+            † Apple Card Monthly Installments (ACMI) is a 0% APR payment option available only in the U.S. to select at checkout for certain Apple products purchased at Apple Store locations, apple.com, the Apple Store app, or by calling 1-800-MY-APPLE and is subject to credit approval and credit limit. See support.apple.com/kb/HT211204 for more information about eligible products. Variable APRs for Apple Card other than ACMI range from 13.24% to 24.24% based on creditworthiness. Rates as of August 1, 2022. If you choose the pay‑in‑full or one‑time‑payment option for an ACMI‑eligible purchase instead of choosing ACMI as the payment option at checkout, that purchase will be subject to the variable APR assigned to your Apple Card. Taxes and shipping are not included in ACMI and are subject to your card’s variable APR. See the Apple Card Customer Agreement for more information. ACMI is not available for purchases made online at the following special stores: Apple Employee Purchase Plan; participating corporate Employee Purchase Programs; Apple at Work for small businesses; Government, and Veterans and Military Purchase Programs, or on refurbished devices. iPhone activation required on iPhone purchases made at an Apple Store with one of these national carriers: AT&T, Sprint, Verizon, or T‑Mobile.
+            To access and use all the features of Apple Card, you must add Apple Card to Wallet on an iPhone or iPad with the latest version of iOS or iPadOS. Update to the latest version by going to Settings > General > Software Update. Tap Download and Install.
+        </li>
+        <li class="list-group-item">
+            Available for qualifying applicants in the United States.
+        </li>
+        <li class="list-group-item">
+            Apple Card is issued by Goldman Sachs Bank USA, Salt Lake City Branch.
+        </li>
+        <li class="list-group-item">
+            If you reside in the U.S. territories, please call Goldman Sachs at 877‑255‑5923 with questions about Apple Card.
+        </li>
+    </ul>
+</div>
