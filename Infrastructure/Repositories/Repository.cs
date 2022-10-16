@@ -1,12 +1,12 @@
 ﻿using DataAccess.Data;
-using DataAccess.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Ardalis.Specification;
 using Ardalis.Specification.EntityFrameworkCore;
+using BusinessLogic.Interfaces;
 
 namespace DataAccess.Repositories
 {
-    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, IEntity
+    internal class Repository<TEntity> : IRepository<TEntity> where TEntity : class, IEntity
     {
         internal StoreDbContext context;
         internal DbSet<TEntity> dbSet;

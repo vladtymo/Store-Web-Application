@@ -1,6 +1,6 @@
-﻿using DataAccess.Interfaces;
+﻿using BusinessLogic.Interfaces;
 
-namespace DataAccess.Entities
+namespace BusinessLogic.Entities
 {
     public class Phone : IEntity
     {

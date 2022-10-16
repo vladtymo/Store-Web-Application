@@ -1,7 +1,6 @@
 ﻿using BusinessLogic.DTOs;
 using BusinessLogic.Interfaces;
 using MVC_apple_store.Helpers;
-using MVC_apple_store.Interfaces;
 
 namespace MVC_apple_store.Services
 {

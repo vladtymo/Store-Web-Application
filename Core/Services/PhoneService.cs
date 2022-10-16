@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
 using BusinessLogic.DTOs;
+using BusinessLogic.Entities;
+using BusinessLogic.Entities.Specifications;
 using BusinessLogic.Interfaces;
-using DataAccess.Entities;
-using DataAccess.Entities.Specifications;
-using DataAccess.Interfaces;
 
 namespace BusinessLogic.Services
 {

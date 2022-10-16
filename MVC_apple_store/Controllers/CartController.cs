@@ -1,6 +1,5 @@
 ﻿using BusinessLogic.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using MVC_apple_store.Interfaces;
 
 namespace MVC_apple_store.Controllers
 {

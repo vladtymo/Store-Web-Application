@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using BusinessLogic.DTOs;
-using DataAccess.Entities;
+using BusinessLogic.Entities;
 
 namespace BusinessLogic.Helpers
 {

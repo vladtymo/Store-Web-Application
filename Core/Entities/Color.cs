@@ -1,7 +1,7 @@
-﻿using DataAccess.Interfaces;
+﻿using BusinessLogic.Interfaces;
 using System.ComponentModel.DataAnnotations;
 
-namespace DataAccess.Entities
+namespace BusinessLogic.Entities
 {
     public enum Colors : int
     {

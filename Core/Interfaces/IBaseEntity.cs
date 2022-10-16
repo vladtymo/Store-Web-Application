@@ -1,4 +1,4 @@
-﻿namespace DataAccess.Interfaces
+﻿namespace BusinessLogic.Interfaces
 {
     public interface IEntity
     {

@@ -2,12 +2,10 @@ using FluentValidation;
 using FluentValidation.AspNetCore;
 using BusinessLogic.Interfaces;
 using BusinessLogic.Services;
-using DataAccess.Data;
-using DataAccess.Interfaces;
-using DataAccess.Repositories;
 using Microsoft.EntityFrameworkCore;
-using MVC_apple_store.Interfaces;
 using MVC_apple_store.Services;
+using Infrastructure;
+using BusinessLogic;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,22 +14,20 @@ string connectionString = builder.Configuration.GetConnectionString("LocalDb");
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<StoreDbContext>(x =>
-        x.UseSqlServer(connectionString));
+builder.Services.AddDbContext(connectionString);
 
 // repository 
-builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddRepository();
 
 // services
 builder.Services.AddScoped<IPhoneService, PhoneService>();
 builder.Services.AddScoped<ICartService, CartService>();
 
 // auto mapper
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddAutoMapper();
 
 // fluent validators
-builder.Services.AddFluentValidationAutoValidation();
-builder.Services.AddValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddValidators();
 
 // session configurations
 builder.Services.AddDistributedMemoryCache();

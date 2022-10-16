@@ -1,6 +1,6 @@
 ﻿using BusinessLogic.DTOs;
 
-namespace MVC_apple_store.Interfaces
+namespace BusinessLogic.Interfaces
 {
     public interface ICartService
     {

@@ -1,6 +1,6 @@
 ﻿using Ardalis.Specification;
 
-namespace DataAccess.Entities.Specifications
+namespace BusinessLogic.Entities.Specifications
 {
     public static class Phones
     {

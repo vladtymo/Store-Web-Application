@@ -1,6 +1,6 @@
 ﻿using Ardalis.Specification;
 
-namespace DataAccess.Interfaces
+namespace BusinessLogic.Interfaces
 {
     public interface IRepository<TEntity> : IDisposable where TEntity : class, IEntity
     {
