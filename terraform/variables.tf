@@ -34,3 +34,9 @@ locals {
 variable "app_port" {
   default = 7151
 }
+
+# https
+
+variable "domain" {
+  default = "softserve-demo.pp.ua"
+}
