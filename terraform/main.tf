@@ -22,3 +22,8 @@ module "https" {
   alb_dns_name = module.lb.alb_dns_name
   alb_zone_id  = module.lb.alb_zone_id
 }
+
+module "ecr" {
+    source = "./modules/ecr"  
+    tags = var.tags
+}
