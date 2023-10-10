@@ -24,6 +24,6 @@ module "https" {
 }
 
 module "ecr" {
-    source = "./modules/ecr"  
-    tags = var.tags
+  source = "./modules/ecr"
+  tags   = var.tags
 }

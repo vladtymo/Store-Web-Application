@@ -23,8 +23,9 @@ resource "aws_route53_record" "lb_record" {
 }
 
 resource "aws_acm_certificate" "cert" {
-  domain_name       = var.domain
-  validation_method = "DNS"
+  domain_name               = var.domain
+  subject_alternative_names = ["*.${var.domain}"]
+  validation_method         = "DNS"
 
   lifecycle {
     prevent_destroy = true
