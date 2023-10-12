@@ -36,6 +36,7 @@ pipeline {
                 '''
             }
         }
+/*
         stage('Provision infrastructure') {
             steps {
                 sh '''
@@ -44,6 +45,7 @@ pipeline {
                 '''
             }
         }
+*/
         stage('Destroy') {
             steps {
                 sh '''
