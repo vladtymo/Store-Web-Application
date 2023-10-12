@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+/*
         stage('Clone repository') {
             steps {
                 sh '''
@@ -10,6 +11,7 @@ pipeline {
                 '''
             }
         }
+*/
         stage('Create EC Registry') {
             steps {
                 sh '''
@@ -26,6 +28,7 @@ pipeline {
         stage('Push to Registry') {
             steps {
                 sh '''
+                    aws --version
                     cd ~/Store-WebApp_Softserve_Academy/
                     sudo docker build . -t softserve-demo/syt:latest -t softserve-demo/syt:build$BUILD_NUMBER
                     sudo docker login -u AWS -p `aws ecr-public get-login-password --region us-east-1` `cat ~/Store-WebApp_Softserve_Academy/terraform/ecr_registry`
@@ -46,6 +49,14 @@ pipeline {
             }
         }
 */
+        stage("Cleaning build environment"){
+            steps{
+                sh '''
+                    docker system prune -a --volumes -f
+                '''
+            }
+        }
+/*
         stage('Destroy') {
             steps {
                 sh '''
@@ -53,5 +64,7 @@ pipeline {
                 '''
             }
         }
+*/
+        
     }
 }
