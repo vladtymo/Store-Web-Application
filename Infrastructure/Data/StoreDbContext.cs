@@ -1,4 +1,4 @@
-﻿using BusinessLogic.Entities;
+﻿using DataAccess.Entities;
 using DataAccess.Entities.Configurations;
 using Microsoft.EntityFrameworkCore;
 

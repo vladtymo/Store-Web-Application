@@ -1,7 +1,7 @@
 ﻿using BusinessLogic.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MVC_apple_store.Controllers
+namespace WebApp.Controllers
 {
     public class CartController : Controller
     {

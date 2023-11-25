@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Ardalis.Specification;
 using Ardalis.Specification.EntityFrameworkCore;
-using BusinessLogic.Interfaces;
+using DataAccess.Interfaces;
 
 namespace DataAccess.Repositories
 {

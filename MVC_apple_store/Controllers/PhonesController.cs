@@ -2,9 +2,9 @@
 using BusinessLogic.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using MVC_apple_store.Helpers;
+using WebApp.Helpers;
 
-namespace MVC_apple_store.Controllers
+namespace WebApp.Controllers
 {
     public class PhonesController : Controller
     {

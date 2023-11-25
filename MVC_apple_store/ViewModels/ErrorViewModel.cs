@@ -1,4 +1,4 @@
-namespace MVC_apple_store.Models
+namespace WebApp.Models
 {
     public class ErrorViewModel
     {

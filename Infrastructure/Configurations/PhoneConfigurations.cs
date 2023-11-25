@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using BusinessLogic.Entities;
 
 namespace DataAccess.Entities.Configurations
 {

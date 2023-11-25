@@ -1,11 +1,9 @@
-using FluentValidation;
-using FluentValidation.AspNetCore;
 using BusinessLogic.Interfaces;
 using BusinessLogic.Services;
 using Microsoft.EntityFrameworkCore;
-using MVC_apple_store.Services;
-using Infrastructure;
+using WebApp.Services;
 using BusinessLogic;
+using DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
 

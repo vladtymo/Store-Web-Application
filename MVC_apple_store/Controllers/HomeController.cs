@@ -1,9 +1,9 @@
 ﻿using BusinessLogic.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using MVC_apple_store.Models;
+using WebApp.Models;
 using System.Diagnostics;
 
-namespace MVC_apple_store.Controllers
+namespace WebApp.Controllers
 {
     public class HomeController : Controller
     {

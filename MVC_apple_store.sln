@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC_apple_store", "MVC_apple_store\MVC_apple_store.csproj", "{02C772F5-C91F-44C8-97A3-0BF84DDDCC20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "MVC_apple_store\WebApp.csproj", "{02C772F5-C91F-44C8-97A3-0BF84DDDCC20}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{43BC64D0-366E-42FD-B1DA-FE9203DEAE03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "Infrastructure\DataAccess.csproj", "{43BC64D0-366E-42FD-B1DA-FE9203DEAE03}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{8BF05785-E6DB-473D-A661-0151B71E7008}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogic", "Core\BusinessLogic.csproj", "{8BF05785-E6DB-473D-A661-0151B71E7008}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

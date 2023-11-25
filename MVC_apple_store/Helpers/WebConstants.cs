@@ -1,4 +1,4 @@
-﻿namespace MVC_apple_store.Helpers
+﻿namespace WebApp.Helpers
 {
     public static class WebConstants
     {

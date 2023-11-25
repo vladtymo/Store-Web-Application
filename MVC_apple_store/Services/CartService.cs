@@ -1,8 +1,8 @@
 ﻿using BusinessLogic.DTOs;
 using BusinessLogic.Interfaces;
-using MVC_apple_store.Helpers;
+using WebApp.Helpers;
 
-namespace MVC_apple_store.Services
+namespace WebApp.Services
 {
     public class CartService : ICartService
     {
