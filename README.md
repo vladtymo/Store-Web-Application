@@ -14,7 +14,7 @@
   ```
 5. Run project.
 
-#### *Checkout the n-layer-architecture branch to see the example of the traditional N-Layer structure.
+#### *Checkout the `n-layer-architecture` branch to see the example of the traditional N-Layer structure.
 
 ## About Clean Architecture
 
